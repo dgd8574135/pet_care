@@ -619,6 +619,12 @@ select {
   letter-spacing: 3px;
   font-size: 15px;
 }
+.review .stars small {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0;
+}
 .review blockquote {
   margin: 17px 0 24px;
   font-size: 13px;

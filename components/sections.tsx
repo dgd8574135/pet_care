@@ -120,7 +120,7 @@ export function Reviews() {
       <div className="section-head">
         <div>
           <div className="eyebrow">LITTLE STORIES, HAPPY PAWS</div>
-          <h2>洗完香香的，心情也好好的</h2>
+          <h2>每次到店，都有不同的小感受</h2>
         </div>
         <p>
           顾客评价文案示例
@@ -130,8 +130,8 @@ export function Reviews() {
       </div>
       <div className="reviews">
         <article className="review">
-          <div className="stars" aria-label="五星文案示例">
-            ★★★★★
+          <div className="stars" aria-label="评分示例：5 分，满分 5 分">
+            <span aria-hidden="true">★★★★★</span> <small>5 / 5</small>
           </div>
           <blockquote>
             “豆豆有点怕生，我一开始还挺担心的。店员没有急着开始，先让它熟悉了一下，剪完也不是那种硬邦邦的造型，圆圆的很可爱。”
@@ -145,11 +145,11 @@ export function Reviews() {
           </div>
         </article>
         <article className="review">
-          <div className="stars" aria-label="五星文案示例">
-            ★★★★★
+          <div className="stars" aria-label="评分示例：4 分，满分 5 分">
+            <span aria-hidden="true">★★★★☆</span> <small>4 / 5</small>
           </div>
           <blockquote>
-            “最喜欢洗完以后摸起来蓬蓬松松的感觉！脚底毛和指甲都处理得很仔细，店员还特意跟我说了日常护理的小细节，回家遛弯都觉得它走路轻快了。”
+            “年糕洗完毛很蓬松，脚底毛和指甲也修得仔细。不过周末按约定时间到了，还是等了二十多分钟。希望忙的时候能提前通知，下次会试试工作日来。”
           </blockquote>
           <div className="review-person">
             <span className="avatar">🐾</span>
@@ -160,11 +160,11 @@ export function Reviews() {
           </div>
         </article>
         <article className="review">
-          <div className="stars" aria-label="五星文案示例">
-            ★★★★★
+          <div className="stars" aria-label="评分示例：3 分，满分 5 分">
+            <span aria-hidden="true">★★★☆☆</span> <small>3 / 5</small>
           </div>
           <blockquote>
-            “我家猫脾气比较大，选洗护真的会纠结。店员会看它的状态，紧张了就停一停，结束后还跟我聊了在家怎么梳毛，感觉挺踏实。”
+            “第一次带橙子来，店员发现它紧张会停下来安抚，这点挺好。但整个洗护比预想久，中途进度需要我主动问。接回家后还发现一小处浮毛没梳开，细节和沟通都有提升空间。”
           </blockquote>
           <div className="review-person">
             <span className="avatar">🐱</span>
