@@ -205,12 +205,30 @@ export function Visit() {
           </p>
           <VisitActions />
         </div>
-        <img
+        <div className="visit-map-frame">
+          <img
           className="visit-map"
           src="/assets/location-map.png"
           alt="用户提供的门店位置地图，标记位于上海市金山区林拓路附近"
           loading="lazy"
         />
+          <div className="visit-map-marker" aria-label="爪爪泡泡门店位置示意">
+            <span className="visit-map-label">爪爪泡泡 <small>在这里等你呀</small></span>
+            <span className="visit-map-pin">
+              <svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+                <ellipse cx="17" cy="23" rx="6" ry="8" transform="rotate(-25 17 23)" />
+                <ellipse cx="29" cy="16" rx="6" ry="8" />
+                <ellipse cx="42" cy="19" rx="6" ry="8" transform="rotate(20 42 19)" />
+                <ellipse cx="51" cy="30" rx="5" ry="7" transform="rotate(35 51 30)" />
+                <path d="M18 43c0-7 8-17 15-17s16 12 16 19c0 10-11 7-16 5-6 2-15 4-15-7Z" />
+                <circle cx="28" cy="40" r="1.7" fill="#fffaf0" />
+                <circle cx="39" cy="40" r="1.7" fill="#fffaf0" />
+                <path d="M31 44q3 4 6 0" fill="none" stroke="#fffaf0" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </span>
+          </div>
+          <span className="visit-map-caption">跟着小爪印，来一场香香的相遇</span>
+        </div>
       </div>
     </section>
   );
