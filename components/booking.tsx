@@ -38,7 +38,12 @@ export function BookingProvider({ children }: { children: ReactNode }) {
     if (selected) setService(selected);
     const now = new Date();
     setMinimumDate(
-      `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`,
+      `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}T00:00`,
+    );
+    const tomorrow = new Date(now);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    setDate(
+      `${tomorrow.getFullYear()}-${String(tomorrow.getMonth() + 1).padStart(2, "0")}-${String(tomorrow.getDate()).padStart(2, "0")}T09:00`,
     );
     dialog.current?.showModal();
   }
@@ -78,7 +83,7 @@ export function BookingProvider({ children }: { children: ReactNode }) {
             }
             setConfirmation(
               (saved ? "到店计划已保存在此浏览器。" : "到店计划已生成。") +
-                ` ${pet} · ${service} · ${date}。这不是门店确认的预约。`,
+                ` ${pet} · ${service} · ${date.replace("T", " ")}。这不是门店确认的预约。`,
             );
           }}
         >
@@ -101,10 +106,10 @@ export function BookingProvider({ children }: { children: ReactNode }) {
               <option key={name}>{name}</option>
             ))}
           </select>
-          <label htmlFor="date">希望到店的日期</label>
+          <label htmlFor="date">希望到店的日期和时间</label>
           <input
             id="date"
-            type="date"
+            type="datetime-local"
             required
             min={minimumDate}
             value={date}
